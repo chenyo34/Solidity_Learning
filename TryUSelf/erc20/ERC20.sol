@@ -60,6 +60,7 @@ contract ERC20 is IERC20 {
         balanceOf[_from] -= value;
         balanceOf[_to] += value;
         emit Transfer(_from, _to, value);
+        return true;
     } else {
         return false;
     }
