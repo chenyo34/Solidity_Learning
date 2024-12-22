@@ -55,15 +55,15 @@ contract ERC20 is IERC20 {
                             address _to,
                             uint256 value) public override returns (bool){
 
-    if ( (balanceOf[_from] >= value) && (allowance[_from][_to] >= value)){
-        allowance[_from][_to] -= value;
-        balanceOf[_from] -= value;
-        balanceOf[_to] += value;
-        emit Transfer(_from, _to, value);
-        return true;
-    } else {
-        return false;
-    }
+        if ( (balanceOf[_from] >= value) && (allowance[_from][_to] >= value)){
+            allowance[_from][_to] -= value;
+            balanceOf[_from] -= value;
+            balanceOf[_to] += value;
+            emit Transfer(_from, _to, value);
+            return true;
+        } else {
+            return false;
+        }
     
     }
 
@@ -78,10 +78,5 @@ contract ERC20 is IERC20 {
         totalSupply -= amount;
         emit Transfer(msg.sender, address(0), amount);
     }
-
-
-
-
-
 }
 
