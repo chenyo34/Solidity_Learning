@@ -1,4 +1,5 @@
-
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.21;
     // Create two files
     // IERC20.sol defines the standard ERC20 interface.  
     // ERC20.sol inherits and overrides IERC20, 

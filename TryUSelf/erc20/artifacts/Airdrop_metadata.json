@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "getSum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_address",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amount",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TryUSelf/erc20/Airdrop.sol": "Airdrop"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TryUSelf/erc20/Airdrop.sol": {
+			"keccak256": "0xb2b7d5f7f346adfe7e335c2e183b0018a50a0560465e3fe846a71c1dc6dbcf4e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://43e7bb0778e1f96de85029d767e13f2a28685babe738947a4882b6a79c7fc956",
+				"dweb:/ipfs/QmTc7QSXny9Xpu7Tsn1Q4z6KGkExN9Y7GKkycKWDQHRSop"
+			]
+		},
+		"TryUSelf/erc20/ERC20.sol": {
+			"keccak256": "0x4810a8e2d9115a535c44ffbe29f3cfd63674987b15f6785474104e5aaf01d238",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9fd4489af817e3a3d01e885fc2036921ed794c0a216b2b01c874ad46ee3b413e",
+				"dweb:/ipfs/QmTbkTQ2YCvJPfkoB1YzY1A6uJpDqaBF3o9ho4STL527sv"
+			]
+		},
+		"TryUSelf/erc20/IERC20.sol": {
+			"keccak256": "0x24c15aa8103a27ed2661a329d6879eb74fa44e497527dba98087c29669b880f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7574f57c505880a1590544f569aaacf21c98a0c3595ac82de0c79afbe9a034ef",
+				"dweb:/ipfs/QmTvkCvXyC22ggy66gFeN7KXsghV91VR6UCe7s7ohisJK1"
+			]
+		}
+	},
+	"version": 1
+}

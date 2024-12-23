@@ -64,7 +64,6 @@ contract ERC20 is IERC20 {
         } else {
             return false;
         }
-    
     }
 
     function mint(uint256 amount) external {
