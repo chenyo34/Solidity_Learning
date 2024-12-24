@@ -3,7 +3,7 @@ pragma solidity ^0.8.21;
 
 import './IERC165.sol';
 
-interface IERC721 is IERC164{
+interface IERC721 is IERC165{
     
     /* Events */
     event Transfer(address indexed from,
