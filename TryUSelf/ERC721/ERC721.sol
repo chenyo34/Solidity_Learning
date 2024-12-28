@@ -189,7 +189,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         require(to != address(0), "Target Address is zero!!!");
         require(_owners[tokenId] == address(0), "Token has been minted!!!");
 
-        _balance[to] != 1;
+        _balance[to] += 1;
         _owners[tokenId] = to;
 
         emit Transfer(address(0), to, tokenId);
