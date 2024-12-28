@@ -28,7 +28,7 @@ contract ERC721 is IERC721, IERC721Metadata{
 
     /* Functions */
 
-    /* IERC165 */
+    /* IERC165 Interface*/
     function supportsInterface(bytes4 interfaceId) external pure override returns (bool){
         return 
             interfaceId == type(IERC721).interfaceId ||
@@ -37,21 +37,24 @@ contract ERC721 is IERC721, IERC721Metadata{
     }
 
 
-    /*  */
+    /* Check the balance of owner */
     function balanceOf(address owner) external view override returns (uint256){
         require(owner != address(0), "owner is zero address!!!");
         return _balance[owner];
     }
 
+    /* check the owner of the tokenId */
     function ownerOf(uint256 tokenId) public view override returns (address owner){
         owner = _owners[tokenId];
         require(owner != address(0), "owner is zero address!!!");
     } 
 
+    /* Check if all the NFT have been approved to the operator */
     function isApprovedForAll(address owner, address operator) external view override returns(bool){
         return _operatorApprovals[owner][operator];
     }
 
+    /* Set the global permission/approval of the owner to the operatar */
     function setApprovalForAll(address operator, bool _approved) external override {
         _operatorApprovals[msg.sender][operator] = _approved;
         emit ApprovalForAll(msg.sender,
@@ -59,11 +62,13 @@ contract ERC721 is IERC721, IERC721Metadata{
                             _approved);
     }
 
+    /* Check the operator of the tokenId */
     function getApproved(uint256 tokenId) external view override returns (address){
         require(_owners[tokenId] != address(0), "token doesnot exist!!!");
         return _tokenApprovals[tokenId];
     }
 
+    /* Implement the approval process with _tokenApprovals */
     function _approve(address owner,
                         address to,
                         uint tokenId) private {
@@ -71,6 +76,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         emit Approval(owner, to, tokenId);
     }
 
+    /* Complete the approve, to the target approving object*/
     function approve(address to, uint256 tokenId) external override {
         address owner = _owners[tokenId];
         require(owner == msg.sender || _operatorApprovals[owner][msg.sender],
@@ -78,6 +84,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         _approve(owner, to, tokenId);
     }
 
+    /* Check if the spender if the owner or approved operator*/
     function _isApprovedOrOwner(address owner,
                                 address spender,
                                 uint256 tokenId) private view returns (bool){
@@ -86,6 +93,8 @@ contract ERC721 is IERC721, IERC721Metadata{
                 _operatorApprovals[owner][spender]);
     }
 
+
+    /*  Transfer the tokenID to from "from" to "to" */
     function _transfer(address owner,
                         address from,
                         address to,
@@ -111,6 +120,8 @@ contract ERC721 is IERC721, IERC721Metadata{
         _transfer(owner, from, to, tokenId);
     }
 
+
+    /* Safe Transfer tokenId from "from" to "to" and check if the receiver meet the condition*/
    function _safeTransferFrom(address owner,
                                 address from,
                                 address to,
@@ -173,7 +184,7 @@ contract ERC721 is IERC721, IERC721Metadata{
 
     
 
-    /* Others */ 
+    /* mint */ 
     function _mint(address to, uint256 tokenId)internal virtual {
         require(to != address(0), "Target Address is zero!!!");
         require(_owners[tokenId] == address(0), "Token has been minted!!!");
@@ -184,6 +195,7 @@ contract ERC721 is IERC721, IERC721Metadata{
         emit Transfer(address(0), to, tokenId);
     }
 
+    /* burn the NFt*/
     function _burn(uint tokenId)internal virtual { // We don't need an address in input para.
         address owner = _owners[tokenId];
         require(owner == msg.sender, "Not Owner of token!!!");

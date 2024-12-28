@@ -1,0 +1,72 @@
+{
+	"id": "5da82bc25a314a22492358be82a8ca52",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"TryUSelf/ERC721/erc721_pra.sol": {
+				"content": "// // SPDX-License-Identifier: MIT\r\n// pragma solidity ^0.8.21;\r\n\r\n// import \"./IERC165.sol\";\r\n// import \"./IERC721.sol\";\r\n// import \"./IERC721Receiver.sol\";\r\n// import \"./IERC721Metadata.sol\";\r\n// import \"./String.sol\";\r\n\r\n// contract ERC721 is IERC721, IERC721Metadata{\r\n//     using Strings for uint256;\r\n\r\n//     /* State Variables */\r\n//     string public override name;\r\n//     string public override symbol;\r\n//     mapping(uint => address) private _owners;\r\n//     mapping(address => uint) private _balance;\r\n//     mapping(uint => address) private _tokenApprovals;\r\n//     mapping(address => mapping(address=>bool)) private _operatorApprovals;\r\n\r\n//     /* Error */\r\n//     error ERC721InvalidReceiver(address receiver);\r\n\r\n//     constructor(){\r\n\r\n//     }\r\n\r\n//     /* Functions */\r\n\r\n//     /* IERC165 Interface*/\r\n//     function supportsInterface(bytes4 interfaceId) external pure override returns (bool){\r\n//         return \r\n//             interfaceId == type(IERC721).interfaceId ||\r\n//             interfaceId == type(IERC165).interfaceId ||\r\n//             interfaceId == type(IERC721Metadata).interfaceId;\r\n//     }\r\n\r\n\r\n//     /* Check the balance of owner */\r\n//     function balanceOf(){}\r\n\r\n//     /* check the owner of the tokenId */\r\n//     function ownerOf(){}\r\n\r\n//     /* Check if all the NFT have been approved to the operator */\r\n//     function isApprovedForAll(){}\r\n\r\n//     /* Set the global permission/approval of the owner to the operatar */\r\n//     function setApprovalForAll(){}\r\n\r\n//     /* Check the operator of the tokenId */\r\n//     function getApproved(){}\r\n\r\n//     /* Implement the approval process with _tokenApprovals */\r\n//     function _approve(){}\r\n\r\n//     /* Complete the approve, to the target approving object*/\r\n//     function approve(){}\r\n\r\n\r\n//     /*  Transfer the tokenID to from \"from\" to \"to\" */\r\n//     function _transfer(){}\r\n\r\n//     function transferFrom(){}\r\n\r\n\r\n//     /* Safe Transfer tokenId from \"from\" to \"to\" and check if the receiver meet the condition*/\r\n//    function _safeTransferFrom(){}\r\n    \r\n\r\n//     function safeTransferFrom(){}\r\n\r\n//     function safeTransferFrom(){}\r\n\r\n\r\n//     function _checkOnERC721Received(address from,\r\n//                                     address to,\r\n//                                     uint256 tokenId,\r\n//                                     bytes memory data) private {\r\n//         if(to.code.length > 0){\r\n//             try IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, data) returns (bytes4 retval) {\r\n//                 if (retval != IERC721Receiver.onERC721Received.selector) {\r\n//                     revert ERC721InvalidReceiver(to);\r\n//                 }\r\n//             } catch (bytes memory reason) {\r\n//                 if (reason.length == 0){\r\n//                     revert ERC721InvalidReceiver(to);\r\n//                 } else{\r\n//                     assembly {\r\n//                         revert(add(32, reason), mload(reason))\r\n//                     }\r\n//                 }\r\n//             }\r\n//         }\r\n//     }\r\n\r\n//         /* IERC721Metadata */\r\n//     function _baseURI()internal view virtual returns(string memory){\r\n//         return \"\";\r\n//     }\r\n\r\n//     function tokenURI(uint256 tokenId) external view virtual override returns (string memory){\r\n//         require(_owners[tokenId] != address(0), \"Token Not exist!!!\");\r\n\r\n//         string memory baseURI = _baseURI();\r\n//         return bytes(baseURI).length > 0? string(abi.encodePacked(baseURI, tokenId.toString())):\"\";\r\n//     }\r\n\r\n    \r\n\r\n//     /* mint */ \r\n//     function _mint(){}\r\n\r\n//     /* burn the NFt*/\r\n//     function _burn(){}\r\n//     }\r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"\n--> TryUSelf/ERC721/erc721_pra.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.26;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "TryUSelf/ERC721/erc721_pra.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"TryUSelf/ERC721/erc721_pra.sol": {
+				"ast": {
+					"absolutePath": "TryUSelf/ERC721/erc721_pra.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "3680:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
