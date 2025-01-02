@@ -137,7 +137,7 @@ contract ERC721 is IERC721, IERC721Metadata{
                                 uint256 tokenId,
                                 bytes memory _data) public override {
         address owner = ownerOf(tokenId);
-        require(_isApprovedOrOwner(owner,to,tokenId), "Not owner not Approved!!!");
+        require(_isApprovedOrOwner(owner, msg.sender,tokenId), "Not owner not Approved!!!");
 
         _safeTransferFrom(owner, from, to, tokenId, _data);
     }

@@ -297,11 +297,11 @@
 	},
 	"sources": {
 		"TryUSelf/ERC721/ERC721.sol": {
-			"keccak256": "0xa3674aa1e9e13fb0c9fd03197d0d38655a8afb6a2a915feedc67a2c875214963",
+			"keccak256": "0xd6d997a6fd5c99094b0f708cfafa694f58efaf17bb962ea90ce9786f0d78ac62",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a1d6b049dfd2944bd17a57030efcf699f0a08e96829ac2bfdd220efb8b162616",
-				"dweb:/ipfs/QmTGiZJD8cmrh6bwB63EDWbHYjrvwVDE1BJ29QnjhSEuVC"
+				"bzz-raw://f68b1729ce0f41a15404a96ae540ae92d673e055c8525684ff5503150e06e4a1",
+				"dweb:/ipfs/Qmeap9yNyzLjPsjpc4WAAfXX8vrQ7hYBsetnNr6XwTeewg"
 			]
 		},
 		"TryUSelf/ERC721/IERC165.sol": {
