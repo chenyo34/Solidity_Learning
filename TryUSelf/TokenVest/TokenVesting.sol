@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "../31_ERC20/ERC20.sol";
+import "../ERC20/ERC20.sol";
 
 /**
  * @title ERC20代币线性释放
@@ -54,7 +54,7 @@ contract TokenVesting {
         } else if (timestamp > start + duration) {
             return totalAllocation;
         } else {
-            return totalAllocation * ((timestamp - start)/duration)
+            return totalAllocation * ((timestamp - start)/duration);
         }
     }
 }

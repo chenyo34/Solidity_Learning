@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "implementation_",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Proxy合约的所有调用都通过`delegatecall`操作码委托给另一个合约执行。后者被称为逻辑合约（Implementation）。 委托调用的返回值，会直接返回给Proxy的调用者",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "初始化逻辑合约地址"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TryUSelf/ProxyContract/PorxyContract.sol": "Proxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TryUSelf/ProxyContract/PorxyContract.sol": {
+			"keccak256": "0x4ea009bd4713ee3ebcda16e2bcd4bce5dfdd9eeda8e3c9f10a7ad1293ae6314b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce1abf4c01cf75b060bf45e8d6f74b4019959c5d17c30aebbcb5e59153601c21",
+				"dweb:/ipfs/Qmdk83vh3sDbeMtXKocEV1gkK6PHutBvrSZb9VhiHxZABF"
+			]
+		}
+	},
+	"version": 1
+}
